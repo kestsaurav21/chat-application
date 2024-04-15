@@ -29,7 +29,47 @@ const Chat = () => {
           <img src="./info.png" alt="" />
         </div>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cumque repellat odit labore inventore nostrum, saepe ipsum est accusamus sequi quaerat sed repellendus similique porro delectus ullam laboriosam. Fuga, accusamus.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cumque repellat odit labore inventore nostrum, saepe ipsum est accusamus sequi quaerat sed repellendus similique porro delectus ullam laboriosam. Fuga, accusamus.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cumque repellat odit labore inventore nostrum, saepe ipsum est accusamus sequi quaerat sed repellendus similique porro delectus ullam laboriosam. Fuga, accusamus.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cumque repellat odit labore inventore nostrum, saepe ipsum est accusamus sequi quaerat sed repellendus similique porro delectus ullam laboriosam. Fuga, accusamus.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cumque repellat odit labore inventore nostrum, saepe ipsum est accusamus sequi quaerat sed repellendus similique porro delectus ullam laboriosam. Fuga, accusamus.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cumque repellat odit labore inventore nostrum, saepe ipsum est accusamus sequi quaerat sed repellendus similique porro delectus ullam laboriosam. Fuga, accusamus.</p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+      </div>
       <div className="bottom">
         <div className="icons">
           <img src="./img.png" alt="" />
