@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./login.css"
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -18,11 +19,18 @@ const Login = () => {
     }
     
   }
+
+  const handleLogin = e => {
+    e.preventDefault();
+    toast.warn("Enter details")
+  }
+
+
   return (
     <div className="login">
         <div className="item">
             <h2>Welcome! back</h2>
-            <form >
+            <form onSubmit={handleLogin}>
                 <input type="text" 
                 name="email" 
                 placeholder="Enter your Email"/>
