@@ -30,6 +30,8 @@ const [loading, setLoading] = useState(false)
     e.preventDefault();
     setLoading(true);
 
+    const formData = new FormData(e.target);
+
     const { email, password } = Object.fromEntries(formData);
 
 
@@ -44,7 +46,7 @@ const [loading, setLoading] = useState(false)
       setLoading(false);
     }
 
-  }
+  };
 
   const handleRegister = async(e) => {
     e.preventDefault();
