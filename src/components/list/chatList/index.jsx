@@ -1,9 +1,29 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./chatlist.css"
 import AddUser from "./addUser";
-const ChatList = () => {
+import {useUserStore} from "../../../lib/userStore"
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../../../lib/firebase";
 
-  const[addMode, seAddtMode] = useState(false);
+const ChatList = () => {
+  const [chats, setChats] = useState([]);
+  const[addMode, setAddMode] = useState(false);
+
+  const { currentUser } = useUserStore();
+
+  useEffect(() => {
+    const unsub = onSnapshot(doc(db, "userchats", "currentUser.id"), (doc) => {
+      setChats(doc.data());
+    });
+
+    return () => {
+      unsub()
+    }
+  }, [currentUser.id]);
+
+  console.log(chats);
+
+
   return (
     <div className="chatList">
       <div className="search">
@@ -12,7 +32,7 @@ const ChatList = () => {
           <input type="text"  placeholder="Search" />
         </div>
         <img src={addMode ? "./minus.png" : "./plus.png" } className="add"
-        onClick={() => seAddtMode((prev) => !prev)}/>
+        onClick={() => setAddMode((prev) => !prev)}/>
 
       </div>
       <div className="item">
