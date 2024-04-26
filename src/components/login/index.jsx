@@ -55,7 +55,7 @@ const [loading, setLoading] = useState(false)
   
 
     const { username, email, password } = Object.fromEntries(formData);
-
+    
 
     try{
 
