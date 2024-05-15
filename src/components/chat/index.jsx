@@ -12,10 +12,9 @@ import { db } from "../../lib/firebase";
 import { useChatStore } from "../../lib/chatStore";
 import { useUserStore } from "../../lib/userStore";
 import upload from "../../lib/upload";
-import { format } from "timeago.js"; // Corrected import from 'timeago'
-
+import { format } from "timeago.js";
 const Chat = () => {
-  const [chat, setChat] = useState({ messages: [] }); // Default to empty messages array
+  const [chat, setChat] = useState({ messages: [] }); 
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
   const [img, setImg] = useState({
@@ -34,7 +33,7 @@ const Chat = () => {
 
   useEffect(() => {
     const unSub = onSnapshot(doc(db, "chats", chatId), (res) => {
-      setChat(res.data() || { messages: [] }); // Ensure default value if no data
+      setChat(res.data() || { messages: [] }); 
     });
 
     return () => {
